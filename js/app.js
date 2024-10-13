@@ -19,6 +19,7 @@ const ANS = {
 /*-- cached elements --*/
 
 const intro = document.querySelector('.intro');
+const disclaimer = document.getElementById('disclaimer');
 const questionContainer = document.querySelector('.question-container');
 const magic8 = document.getElementById('pic')
     
@@ -75,10 +76,12 @@ function handleSubmit() {
          const randomAnswer = ANS[randomIndex];
 
          askedQuestion.style.visibility = 'visible';
-         askedQuestion.innerText = userQuestion;  
+         askedQuestion.innerText = `Your Question: "${userQuestion}"`;  
          answer.style.visibility = 'visible';
-         answer.innerText = randomAnswer;
+         answer.innerText = `Your Answer: ${randomAnswer}`;
          reset.style.visibility = 'visible';
+         disclaimer.style.visibility = 'visible';
+         
      } else {
          // Handle empty question case
          answer.innerText = 'Please ask a question.';
@@ -102,3 +105,4 @@ function resetMagic8() {
 }
 
 // interperlate askedQuestion & answer
+// font
