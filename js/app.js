@@ -36,15 +36,10 @@ submit.addEventListener('click', () => {
     // Make the image visible and add the shake animation class
     magic8.style.visibility = 'visible';
     magic8.classList.add('shake');
-
     handleSubmit();
-    // Remove the shake animation class and hide the image after the animation ends
     setTimeout(() => {
         magic8.classList.remove('shake');
         magic8.style.visibility = 'hidden';
-
-        // Handle the question and answer
-        
     }, 700);
 });
 
