@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
+    color: #5d04ab;
 }
 
 .intro {
@@ -106,7 +107,7 @@ img {
 
 .button-style {
   -webkit-tap-highlight-color: transparent;
-  background-color: #000;
+  background-color: whitesmoke;
   background-image: none;
   color: #5d04ab;
   cursor: pointer;
@@ -131,7 +132,6 @@ img {
 
 .button-style svg {
   display: block;
-  vertical-align: middle;
 }
 
 .button-style [hidden] {
