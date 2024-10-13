@@ -18,10 +18,17 @@
         <input type="text" name="text" placeholder="Enter Text" id="question">
     </div>
     <div class="button">
-        <button id="submit">ask.</button>
-        <button id="reset">reset.</button>
+        <!-- <button id="submit">ask.</button> -->
+        <button class="button-style" id="submit">
+            <span class="text">ask</span>
+            <span aria-hidden="" class="marquee">ask</span>
+          </button>
+          <button class="button-style" id="reset">
+            <span class="text">reset</span>
+            <span aria-hidden="" class="marquee">reset</span>
+          </button>
     </div>
-    <div>
+    <div class="response">
         <h3 id="asked-question"></h3>
         <h3 id="answer"></h3>
     </div>

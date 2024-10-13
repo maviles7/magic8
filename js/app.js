@@ -102,4 +102,3 @@ function resetMagic8() {
 }
 
 // interperlate askedQuestion & answer
-// add reset functionalit
