@@ -19,13 +19,13 @@ const ANS = {
 /*-- cached elements --*/
 
 const intro = document.querySelector('.intro');
-const disclaimer = document.getElementById('disclaimer');
 const questionContainer = document.querySelector('.question-container');
-const magic8 = document.getElementById('pic')
-    
+
+const disclaimer = document.getElementById('disclaimer');
 const question = document.getElementById('question')
 const askedQuestion = document.getElementById('asked-question')
 const answer = document.getElementById('answer')
+const magic8 = document.getElementById('pic')
 
 const submit = document.getElementById('submit')
 const reset = document.getElementById('reset')
@@ -33,14 +33,17 @@ const reset = document.getElementById('reset')
 /*-- event listeners --*/
 
 submit.addEventListener('click', () => {
+
     // Make the image visible and add the shake animation class
     magic8.style.visibility = 'visible';
     magic8.classList.add('shake');
+
     handleSubmit();
     setTimeout(() => {
+        console.log('timeout');
         magic8.classList.remove('shake');
         magic8.style.visibility = 'hidden';
-    }, 700);
+    }, 1000);
 });
 
 reset.addEventListener('click', resetMagic8);
@@ -60,7 +63,9 @@ function handleSubmit() {
     questionContainer.style.visibility = 'hidden'; 
     submit.style.visibility = 'hidden';
     reset.style.visibility = 'hidden';
-
+    askedQuestion.style.visibility = 'hidden';
+    answer.style.visibility = 'hidden';
+    
     // Get the user's question
     const userQuestion = question.value.trim();
 
@@ -99,5 +104,6 @@ function resetMagic8() {
     askedQuestion.innerText = '';
 }
 
-// interperlate askedQuestion & answer
-// font
+// buttan alignment
+// enter & ask 
+// hide disclamer & response w/shake

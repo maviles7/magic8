@@ -11,6 +11,16 @@ body {
     color: #5d04ab;
 }
 
+#pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Ensure the image is below the question container */
+  visibility: hidden; /* Initially hidden */
+}
+
 .intro {
     display: flex;
     flex-direction: column;
@@ -18,6 +28,10 @@ body {
     align-items: center;
     align-content: center;
     text-align: center;
+}
+
+.hideen {
+    visibility: hidden;
 }
 
 .question-container {
@@ -72,11 +86,6 @@ body {
     align-content: center;
     text-align: center;
 }
-  
-
-img {
-    visibility: hidden; 
-}
 
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -93,7 +102,7 @@ img {
 }
 
 .shake {
-    animation: shake 0.5s;
+    animation: shake 1000ms;
     animation-iteration-count: infinite;
 }
 
