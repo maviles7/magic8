@@ -41,6 +41,15 @@ submit.addEventListener('click', () => {
     handleSubmit();
 });
 
+question.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        magic8.style.visibility = 'visible';
+        magic8.classList.add('shake');
+
+        handleSubmit();
+    }
+});
+
 reset.addEventListener('click', resetMagic8);
 
 /*-- functions --*/
@@ -109,4 +118,3 @@ function resetMagic8() {
 
 // buttan alignment
 // enter & ask 
-// hide disclamer & response w/shake
