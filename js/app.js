@@ -39,11 +39,6 @@ submit.addEventListener('click', () => {
     magic8.classList.add('shake');
 
     handleSubmit();
-    setTimeout(() => {
-        console.log('timeout');
-        magic8.classList.remove('shake');
-        magic8.style.visibility = 'hidden';
-    }, 1000);
 });
 
 reset.addEventListener('click', resetMagic8);
@@ -65,6 +60,7 @@ function handleSubmit() {
     reset.style.visibility = 'hidden';
     askedQuestion.style.visibility = 'hidden';
     answer.style.visibility = 'hidden';
+    disclaimer.style.visibility = 'hidden';
     
     // Get the user's question
     const userQuestion = question.value.trim();
@@ -75,12 +71,19 @@ function handleSubmit() {
          const randomIndex = Math.floor(Math.random() * Object.keys(ANS).length) + 1;
          const randomAnswer = ANS[randomIndex];
 
-         askedQuestion.style.visibility = 'visible';
-         askedQuestion.innerText = `Your Question: "${userQuestion}"`;  
-         answer.style.visibility = 'visible';
-         answer.innerText = `Your Answer: ${randomAnswer}`;
-         reset.style.visibility = 'visible';
-         disclaimer.style.visibility = 'visible';
+         setTimeout(() => {
+            console.log('timeout');
+            magic8.classList.remove('shake');
+            magic8.style.visibility = 'hidden';
+
+            askedQuestion.style.visibility = 'visible';
+            askedQuestion.innerText = `Your Question: "${userQuestion}"`;  
+            answer.style.visibility = 'visible';
+            answer.innerText = `Your Answer: ${randomAnswer}`;
+            reset.style.visibility = 'visible';
+            disclaimer.style.visibility = 'visible';
+
+        }, 1000);
          
      } else {
          // Handle empty question case
