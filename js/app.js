@@ -96,9 +96,15 @@ function handleSubmit() {
          
      } else {
          // Handle empty question case
-         answer.innerText = 'Please ask a question.';
-         answer.style.visibility = 'visible';
-         reset.style.visibility = 'visible';
+         setTimeout(() => {
+            magic8.classList.remove('shake');
+            magic8.style.visibility = 'hidden';
+        
+             answer.style.visibility = 'visible';
+             reset.style.visibility = 'visible';
+            //  magic8.style.visibility = 'hidden';
+             answer.innerText = 'Please ask a question.';
+         }, 3000)
      }
 };
 
@@ -116,5 +122,3 @@ function resetMagic8() {
     askedQuestion.innerText = '';
 }
 
-// buttan alignment
-// enter & ask 
